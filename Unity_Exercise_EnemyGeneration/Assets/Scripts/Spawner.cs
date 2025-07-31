@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -35,9 +34,21 @@ public class Spawner : MonoBehaviour
         {
             GameObject spawnPoint = GetRandomSpawnPoint();
             enemySkeleton = Instantiate<Skeleton>(_skeletonPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
-            enemySkeleton.AddComponent<SkeletonMover>();
+
+            if (enemySkeleton.TryGetComponent<SkeletonMover>(out SkeletonMover skeletonMover))
+            {
+                enemySkeleton.Dying += DestroySkeleton;
+                skeletonMover.InitializeDirection(Vector3.forward);
+            }
+
             yield return wait;
         }
+    }
+
+    private void DestroySkeleton(Skeleton skeleton)
+    {
+        skeleton.Dying -= DestroySkeleton;
+        Destroy(skeleton.gameObject);
     }
 
     private GameObject GetRandomSpawnPoint()
