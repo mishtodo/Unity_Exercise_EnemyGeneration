@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -825,9 +825,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.85472065, y: 2.44841, z: -3.9006252}
+    m_Target: {x: 0.4063519, y: 2.1843243, z: -4.056368}
     speed: 2
-    m_Value: {x: 0.85472065, y: 2.44841, z: -3.9006252}
+    m_Value: {x: 0.4063519, y: 2.1843243, z: -4.056368}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -873,13 +873,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.24089268, y: 0.013682363, z: -0.0033959015, w: -0.97045195}
+    m_Target: {x: -0.23945741, y: 0.0049496945, z: -0.0012203358, w: -0.97089607}
     speed: 2
-    m_Value: {x: -0.24234748, y: 0.013677219, z: -0.003416413, w: -0.9700871}
+    m_Value: {x: -0.23945682, y: 0.004949682, z: -0.0012203328, w: -0.9708936}
   m_Size:
-    m_Target: 10.998362
+    m_Target: 10.9760895
     speed: 2
-    m_Value: 10.998362
+    m_Value: 10.9760895
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -943,23 +943,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
+      m_SelectedIDs: 4c5c0000
+      m_LastClickedID: 23628
       m_ExpandedIDs: 26fbffff085c00000c5c0000105c0000145c0000265c00004c5c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Ground
-        m_OriginalName: Ground
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 23550
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -1116,7 +1116,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1126,16 +1126,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Unity\Projects\Unity_Exercise_EnemyGeneration\Unity_Exercise_EnemyGeneration
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 48}
-    m_SelectedIDs: 365d0000
-    m_LastClickedID: 23862
-    m_ExpandedIDs: 000000002a5d0000345d000000ca9a3b
+    m_SelectedIDs: 3a5d0000
+    m_LastClickedID: 23866
+    m_ExpandedIDs: 000000002a5d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
