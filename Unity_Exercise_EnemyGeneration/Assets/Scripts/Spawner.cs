@@ -33,7 +33,7 @@ public class Spawner : MonoBehaviour
         while (enabled) 
         {
             GameObject spawnPoint = GetRandomSpawnPoint();
-            enemySkeleton = Instantiate<Skeleton>(_skeletonPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            enemySkeleton = Instantiate<Skeleton>(_skeletonPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation, spawnPoint.transform);
 
             if (enemySkeleton.TryGetComponent<SkeletonMover>(out SkeletonMover skeletonMover))
             {
