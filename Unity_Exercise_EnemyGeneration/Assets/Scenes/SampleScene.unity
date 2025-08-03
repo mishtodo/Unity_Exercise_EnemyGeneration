@@ -427,8 +427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd165c2258992844aec6a6c65efd3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkeletonPrefab: {fileID: -1180780337213583840, guid: d713f4c4591936b47be11e6167f824ee, type: 3}
-  Target: {fileID: 1155983757}
+  _target: {fileID: 1155983757}
+  _skeletonPrefab: {fileID: -1180780337213583840, guid: d713f4c4591936b47be11e6167f824ee, type: 3}
 --- !u!1 &264364588
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,8 +538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd165c2258992844aec6a6c65efd3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkeletonPrefab: {fileID: -1180780337213583840, guid: 16a97ac2edd5ae34291f157f3542fe83, type: 3}
-  Target: {fileID: 601761392}
+  _target: {fileID: 601761392}
+  _skeletonPrefab: {fileID: -1180780337213583840, guid: 16a97ac2edd5ae34291f157f3542fe83, type: 3}
 --- !u!1 &462171723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,8 +1703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd165c2258992844aec6a6c65efd3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkeletonPrefab: {fileID: -1180780337213583840, guid: 0dfafa499f86491409184e8b1c4f4490, type: 3}
-  Target: {fileID: 1376055751}
+  _target: {fileID: 1376055751}
+  _skeletonPrefab: {fileID: -1180780337213583840, guid: 0dfafa499f86491409184e8b1c4f4490, type: 3}
 --- !u!1 &1745710172
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,9 +32,9 @@ public class Spawner : MonoBehaviour
         while (enabled) 
         {
             SpawnPoint spawnPoint = GetRandomSpawnPoint();
-            enemySkeleton = Instantiate<Skeleton>(spawnPoint.SkeletonPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation, spawnPoint.transform);
+            enemySkeleton = Instantiate<Skeleton>(spawnPoint.GetSkeletonPrefab(), spawnPoint.transform.position, spawnPoint.transform.rotation, spawnPoint.transform);
             enemySkeleton.Dying += DestroySkeleton;
-            enemySkeleton.SkeletonMover.Target = spawnPoint.Target;
+            enemySkeleton.SkeletonMover.Target = spawnPoint.GetTarget();
 
             yield return wait;
         }
