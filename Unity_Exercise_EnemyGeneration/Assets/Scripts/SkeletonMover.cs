@@ -3,16 +3,11 @@ using UnityEngine;
 public class SkeletonMover : MonoBehaviour 
 {
     [SerializeField] private float _speed = 4.75f;
-
-    public Vector3 Direction { get; private set; }
+    
+    public GameObject Target;
 
     private void Update()
     {
-        transform.Translate(Direction * _speed * Time.deltaTime);
-    }
-
-    public void InitializeDirection(Vector3 direction)
-    {
-        Direction = direction;
+        transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, _speed * Time.deltaTime);
     }
 }

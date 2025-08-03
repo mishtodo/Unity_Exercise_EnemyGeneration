@@ -4,7 +4,6 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _spawnPoints;
-    [SerializeField] private Skeleton _skeletonPrefab;
     [SerializeField] private float _spawnRate = 1.0f;
 
     private Coroutine _coroutine;
@@ -32,10 +31,10 @@ public class Spawner : MonoBehaviour
 
         while (enabled) 
         {
-            GameObject spawnPoint = GetRandomSpawnPoint();
-            enemySkeleton = Instantiate<Skeleton>(_skeletonPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation, spawnPoint.transform);
+            SpawnPoint spawnPoint = GetRandomSpawnPoint();
+            enemySkeleton = Instantiate<Skeleton>(spawnPoint.SkeletonPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation, spawnPoint.transform);
             enemySkeleton.Dying += DestroySkeleton;
-            enemySkeleton.SkeletonMover.InitializeDirection(Vector3.forward);
+            enemySkeleton.SkeletonMover.Target = spawnPoint.Target;
 
             yield return wait;
         }
@@ -47,11 +46,14 @@ public class Spawner : MonoBehaviour
         Destroy(skeleton.gameObject);
     }
 
-    private GameObject GetRandomSpawnPoint()
+    private SpawnPoint GetRandomSpawnPoint()
     {
         int minSpawnPoint = 0;
         int maxSpawnPoint = _spawnPoints.Length;
 
-        return _spawnPoints[Random.Range(minSpawnPoint, maxSpawnPoint)];
+        if (_spawnPoints[Random.Range(minSpawnPoint, maxSpawnPoint)].TryGetComponent<SpawnPoint>(out SpawnPoint spawnPoint))
+            return spawnPoint;
+        else 
+            return null;
     }
 }
