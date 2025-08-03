@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    [SerializeField] private GameObject _target;
+    [SerializeField] private Transform _target;
     [SerializeField] private Skeleton _skeletonPrefab;
 
-    public GameObject GetTarget()
+    public Transform GetTarget()
     {
         return _target;
     }
